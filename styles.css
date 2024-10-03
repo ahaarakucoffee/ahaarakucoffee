@@ -1,0 +1,204 @@
+/* General body styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(254, 254, 254);
+    text-align: center;
+    font-size: x-large;    optionssizes
+    color: black;   
+}
+
+/* Header styling */
+header {/* Add the bounce keyframes */
+    @keyframes bounce {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    
+    /* Modify your existing header styles to include the animation */
+    header {
+        text-align: center;
+        font-size: em;
+        font-family: "Courier New", monospace;
+        color: #ffffff;
+        animation: bounce 0s ease-in-out infinite;
+    
+    background-color: #ffffff;
+    color: rgb(255, 255, 255);
+    font-size: xxx-large;
+    text-align: center;
+    padding: 20px;
+}
+
+}
+
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #fffffe;
+    font-size: x-large;
+}
+
+/* Slider Section */
+.slider-section {
+    text-align: center;
+    position: relative;
+    margin: 30px 0; /* Add margin for spacing */
+}
+
+.slider {
+    overflow: hidden;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.slide {
+    display: none; /* Hide all slides by default */
+    flex-direction: column;
+    align-items: center;
+}
+
+.slide img {
+    width: 100%; /* Make the image responsive */
+    border-radius: 10px;
+}
+
+.slide.active {
+    display: flex; /* Show the active slide */
+}
+
+/* Navigation buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Product Section */
+.product-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.product-section h2 {
+    margin-bottom: 20px;
+    font-size: 3cm;
+    color: rgb(90, 133, 119);
+}
+
+.product-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-section ul li {
+    font-size: 1cm;
+    margin-bottom: 10px;
+}
+
+/* Image Section */
+.image-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.image-section img {
+    width: 80%;
+    height: auto;
+    max-width: 50000px;
+    border-radius: 10px;
+}
+
+/* Video Section */
+.video-section {
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.video-section video {
+    width: 100%;
+    max-width: 50000px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer styling */
+footer {
+    background-color: #8B4513; /* Coffee color */
+    color: black;
+    padding: 20px;
+    text-align: center;
+    font-size: small;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content h2, .footer-content h3 {
+    margin: 10px 0;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+
+.social-media a {
+    color: #FFD700; /* Gold color for links */
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 0.9em;
+}
+
+footer p, footer a {
+    color: white;
+    margin: 10px 0;
+    text-decoration: none;
+    font-weight: bold;
+}
+    

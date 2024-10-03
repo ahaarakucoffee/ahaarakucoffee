@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AhaarakuCoffee.in</title>
+    <link rel="stylesheet" href="styles.css"> <!-- External CSS Link -->
+    <title>Animated Header</title>
+    <style>
+         @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        header {
+            text-align: center;
+            font-size: 2em;
+            font-family: "Courier New", monospace;
+            color: #f9f9f9;
+            animation: fadeIn 2s ease-in-out; /* Apply the fadeIn animation */
+        }
+    </style>
+    <style>
+        /* Slider Section */
+        .slider-section {
+            text-align: center;
+            position: relative;
+            margin: 30px 0; /* Add margin for spacing */
+        }
+
+        .slider {
+            overflow: hidden;
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .slide {
+            display: none; /* Hide all slides by default */
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .slide img {
+            width: 100%; /* Make the image responsive */
+            border-radius: 10px;
+        }
+
+        .slide.active {
+            display: flex; /* Show the active slide */
+        }
+
+        /* Navigation buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 10px;
+            color: white;
+            background-color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            transform: translateY(-50%);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active'); // Hide all slides
+                    if (i === index) {
+                        slide.classList.add('active'); // Show the current slide
+                    }
+                });
+            }
+
+            function moveSlide(step) {
+                currentSlide += step; // Update the current slide index
+                if (currentSlide >= totalSlides) {
+                    currentSlide = 0; // Loop back to the first slide
+                }
+                if (currentSlide < 0) {
+                    currentSlide = totalSlides - 1; // Loop back to the last slide
+                }
+                showSlide(currentSlide); // Show the updated slide
+            }
+
+            // Show the first slide initially
+            showSlide(currentSlide);
+
+            // Optional: Auto-slide every 5 seconds
+            setInterval(() => {
+                moveSlide(1);
+            }, 5000); // Change slide every 5 seconds
+        });
+    </script>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <section class="video-section">
+           
+            <video autoplay loop muted > 
+                <source src="videos/video0033.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </header>
+        <body>
+        <nav>
+            <ul>
+                <br><br>
+                <a href="https://www.instagram.com/aha_araku_coffee/" target="_blank">HOME </a> |
+
+                <a href="https://www.instagram.com/aha_araku_coffee/" target="_blank">SHOP NOW </a> |
+
+               
+               
+                <a href="https://www.instagram.com/aha_araku_coffee/" target="_blank">CONTACT US </a> |
+
+                <a href="https://www.instagram.com/aha_araku_coffee/" target="_blank">ABOUT US  </a> |
+
+                
+            </ul>
+        </nav>
+    </body>
+<body>
+   <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+   
+
+
+
+    
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <section class="slider-section">
+            <h2>Featured Products</h2> <br><br>
+            <div class="slider">
+                <div class="slide active">
+                   <img src="images/coffee1.png" alt="Coffee 1">
+                    <h1>Premium Coffee Blend - 599/-</h1>
+                </div>
+                <div class="slide">
+                    <img src="images/coffee2.png" alt="Coffee 2">
+                    <h1>Dark Roast Coffee - 799/-</h1>
+                </div>
+                <div class="slide">
+                    <img src="images/coffee3.png" alt="Coffee 3">
+                    <h1>Medium Roast Coffee - 999/-</h1>
+                </div>
+            </div>
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
+    </section>
+
+
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <h2></h2>
+        <video autoplay loop muted >
+            <source src="videos/coffee11.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+  
+  
+    <!-- Footer Section -->
+   
+    <!-- Footer Section -->
+<footer>
+   
+    <div class="footer-content">    
+        <br><br><br> <br><br><br> <br><br><br>
+        <h2>Stay Connected</h2>
+        <p>Join our coffee community for updates, promotions, and special offers!</p>
+
+        <div class="social-media">
+            <h3>Follow Us:</h3>
+            <a href="https://www.instagram.com/aha_araku_coffee/" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/aha_araku_coffee/" target="_blank">Facebook</a> |
+            <a href="https://twitter.com/aha_araku_coffee" target="_blank">Twitter</a>
+        </div>
+
+        <div class="contact-info">
+           
+            <section>
+                <h1>Contact Us</h1>
+                <form action="https://formspree.io/f/mwpegjdy" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <input type="submit" value="Submit">
+                </form>              
+            </section>
+            <br><br>
+            <p>Email : <a href="mailto:ahaarakucoffee@gmail.com">ahaarakucoffee@gmail.com</a></p>
+            <p>Phone : <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2024 ahaarakuCoffee.in All rights reserved.</p>
+    </div>
+</footer>
+
+
+</body>
+</html>
